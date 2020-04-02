@@ -1,0 +1,18 @@
+.header-wrapper {
+  background: #1c8ee6;
+  -webkit-box-shadow: 0px 5px 10px -6px rgb(43, 42, 42);
+  -moz-box-shadow: 0px 5px 10px -6px rgb(43, 42, 42);
+  box-shadow: 0px 5px 10px -6px rgb(43, 42, 42);
+  border-radius: 4px;
+}
+
+
+
+.ui.header.logo {
+  text-align: center;
+  color: white;
+}
+
+.ui.header.logo span {
+	margin: 0 1px;
+}

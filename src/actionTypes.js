@@ -1,0 +1,7 @@
+export const SET_VENUES = 'SET_VENUES';
+export const SET_REQUIREMENTS = 'SET_REQUIREMENTS';
+export const SET_CITIES = 'SET_CITIES';
+export const SELECT_CITY = 'SELECT_CITY';
+export const SET_STATES = 'SET_STATES';
+export const SELECT_STATE = 'SELECTE_STATE';
+export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE';
