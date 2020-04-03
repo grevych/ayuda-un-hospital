@@ -19,9 +19,13 @@ const requirementsReducer = (state = {}, action) => {
 	switch (action.type) {
 		case types.SET_REQUIREMENTS:
 			return action.requirements.reduce((accum, requirement) => {
-				accum[requirement.id] = accum[requirement.id] || requirement;
+				accum[requirement.id] = requirement;
 				return accum;
-			}, {...state})
+			}, {})
+		case types.SET_CITIES:
+			return {}
+		case types.SET_VENUES:
+			return {}
 		default:
 		  return state
 	}
@@ -31,9 +35,11 @@ const venuesReducer = (state = {}, action) => {
 	switch (action.type) {
 		case types.SET_VENUES:
 			return action.venues.reduce((accum, venue) => {
-				accum[venue.id] = accum[venue.id] || venue;
+				accum[venue.id] = venue;
 				return accum;
-			}, {...state})
+			}, {})
+		case types.SET_CITIES:
+			return {}
 		default:
 		  return state
 	}
@@ -43,9 +49,9 @@ const citiesReducer = (state = {}, action) => {
 	switch (action.type) {
 		case types.SET_CITIES:
 			return action.cities.reduce((accum, city) => {
-				accum[city.id] = accum[city.id] || city;
+				accum[city.id] = city;
 				return accum;
-			}, {...state})
+			}, {})
 		default:
 		  return state
 	}
@@ -55,9 +61,9 @@ const statesReducer = (state = {}, action) => {
 	switch (action.type) {
 		case types.SET_STATES:
 			return action.states.reduce((accum, state) => {
-				accum[state.id] = accum[state.id] || state;
+				accum[state.id] = state;
 				return accum;
-			}, {...state})
+			}, {})
 		default:
 		  return state
 	}

@@ -1,13 +1,14 @@
 import React from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Dropdown } from 'semantic-ui-react'
 
 import './StatesDropdown.css';
 import { loadStates, loadCities } from '../actions';
+import _ from 'lodash';
 
 
 const StatesDropdown = () => {
-	const states = useSelector(state => state.states, shallowEqual);
+	const states = useSelector(state => state.states, _.isEqual);
 	const options = Object.values(states)
 		.map(state => ({ key: state.id, value: state.id, text: state.name }));
 	const dispatch = useDispatch();
