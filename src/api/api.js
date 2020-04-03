@@ -8,7 +8,7 @@ import State from './state';
 import states from './states.json'
 
 
-const token = ''; // process.env.API_TOKEN
+const token = process.env.REACT_APP_API_TOKEN;
 
 const httpLink = createHttpLink({
 	uri: 'https://graphql.datocms.com/',
