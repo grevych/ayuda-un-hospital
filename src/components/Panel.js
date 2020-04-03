@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Grid, Card } from 'semantic-ui-react'
 import moment from 'moment';
 
-import { loadRequirements } from '../actions';
 import './Panel.css'
+import { loadRequirements } from '../actions';
+import _ from 'lodash';
 
 
 const getMapLink = ({latitude, longitude}) => {
@@ -13,11 +14,11 @@ const getMapLink = ({latitude, longitude}) => {
 
 function Panel() {
 	const venues = useSelector(
-		state => state.selectedState.selectedCity.venues, shallowEqual
+		state => state.selectedState.selectedCity.venues, _.isEqual
 	);
 	const requirements = useSelector(
 		state => state.selectedState.selectedCity.selectedVenue.requirements,
-		shallowEqual
+		_.isEqual
 	);
 	const dispatch = useDispatch();
 
